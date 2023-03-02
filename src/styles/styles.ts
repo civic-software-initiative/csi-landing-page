@@ -95,6 +95,11 @@ export const Styles = createGlobalStyle`
         outline: none;
     }
 
+    ::selection {
+      color: #fff;
+      background: #082e4a;
+    }
+
     .about-block-image svg {
         text-align: center;
     }
