@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const ScrollUpContainer = styled("div")<any>`
+export const ScrollUpContainer = styled("div") <any>`
   padding: 10px;
   position: fixed;
   right: 30px;
   bottom: 30px;
   z-index: 10;
   cursor: pointer;
-  background: rgb(241, 242, 243);
+  background: #082e4a;
   text-align: center;
   align-items: center;
   border-radius: 4px;
