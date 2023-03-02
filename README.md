@@ -5,3 +5,5 @@ Where all things begin
 ## TODO
 
 - Favicon that is actually visible
+- Testing mobile responsiveness
+- Darkmode
