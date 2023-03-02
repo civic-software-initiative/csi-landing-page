@@ -33,7 +33,7 @@ export const CustomNavLink = styled("div")`
   }
 `;
 
-export const ContactWrapper = styled("div")<any>`
+export const ContactWrapper = styled("div") <any>`
   cursor: pointer;
   width: ${(p) => (p.width ? "100%" : "110px")};
   font-weight: 700;
@@ -43,19 +43,19 @@ export const ContactWrapper = styled("div")<any>`
 `;
 
 export const Burger = styled("div")`
-  @media only screen and (max-width: 890px) {
+  @media only screen and (max-width: 1780px) {
     display: block;
   }
 
   display: none;
 
   svg {
-    fill: #2e186a;
+    fill: #3d0080;
   }
 `;
 
 export const NotHidden = styled("div")`
-  @media only screen and (max-width: 890px) {
+  @media only screen and (max-width: 1780px) {
     display: none;
   }
 `;
