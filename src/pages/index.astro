@@ -1,24 +1,26 @@
 ---
-// Component Imports
-import Button from '../components/Button.astro';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+const { generator, site } = Astro;
+const title = "Civic Software Initiative";
+const description = "CSI provides top-quality tech solutions for nonprofits, community organizations, and civic institutions pro bono or low bono.";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<meta name="generator" content={generator} />
+
+		<title>{title}</title>
+		<meta name="description" content={description} />
+
+		<!-- social media -->
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={site} />
 	</head>
 
 	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
 	</body>
 </html>
