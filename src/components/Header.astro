@@ -14,7 +14,7 @@ const links = [
 <header
   class:list={[
     { sticky: true, relative: false },
-    "top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100",
+    "bg-slate-blue opacity-75 top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100",
   ]}
   id="header"
 >
@@ -28,7 +28,7 @@ const links = [
       <div class="flex items-center md:hidden">
         <button
           type="button"
-          class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition"
+          class="ml-1.5 text-violet-purple hover:text-red focus:outline-none focus:ring-4 focus:ring-violet-purple rounded-lg text-sm p-2.5 inline-flex items-center transition"
           aria-label="Toggle Menu"
           data-aw-toggle-menu
         >
@@ -47,7 +47,7 @@ const links = [
           links.map((text) => (
             <li class="">
               <a
-                class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                class="font-medium text-violet-purple hover:text-red px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 href={text.toLowerCase()}
               >
                 {text}
