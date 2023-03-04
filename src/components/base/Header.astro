@@ -2,12 +2,30 @@
 import { Icon } from "astro-icon";
 
 const links = [
-  "About",
-  "Services",
-  "Handbook",
-  "Team",
-  "Financials",
-  "Contact",
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Services",
+    href: "/services",
+  },
+  {
+    title: "Handbook",
+    href: "/handbook",
+  },
+  {
+    title: "Team",
+    href: "/team",
+  },
+  {
+    title: "Financials",
+    href: "/financials",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+  },
 ];
 ---
 
@@ -44,13 +62,13 @@ const links = [
         class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base"
       >
         {
-          links.map((text) => (
+          links.map(({ title, href }) => (
             <li class="">
               <a
                 class="font-medium text-violet-purple hover:text-red px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                href={text.toLowerCase()}
+                href={href}
               >
-                {text}
+                {title}
               </a>
             </li>
           ))
