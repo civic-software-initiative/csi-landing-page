@@ -15,6 +15,7 @@ export interface Props {
   image?: string | any; // TODO: find HTMLElementProps
   isReversed?: boolean;
   isAfterContent?: boolean;
+  bgColor?: boolean;
 }
 const {
   title = await Astro.slots.render("title"),
@@ -25,13 +26,16 @@ const {
   image = await Astro.slots.render("image"),
   isReversed = false,
   isAfterContent = false,
+  bgColor = false,
 } = Astro.props;
 ---
 
 <section
   class:list={[
     { "pt-0 md:pt-0": isAfterContent },
-    "bg-blue-50 dark:bg-slate-800 py-16 md:py-20",
+    { "bg-light-blue dark:bg-dark-slate-blue": bgColor },
+    { "bg-white dark:bg-slate-blue": !bgColor },
+    "py-16 md:py-20",
   ]}
 >
   <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
@@ -40,19 +44,31 @@ const {
         <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
           {highlight && (
             <p
-              class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase"
+              class:list={[
+                { "text-black dark:text-white": bgColor },
+                { "text-black": !bgColor },
+                "text-base text-primary font-semibold tracking-wide uppercase",
+              ]}
               set:html={highlight}
             />
           )}
           {title && (
             <h2
-              class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+              class:list={[
+                { "text-black dark:text-slate-400": bgColor },
+                { "text-slate-400 dark:text-black": !bgColor },
+                "text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading",
+              ]}
               set:html={title}
             />
           )}
           {subtitle && (
             <p
-              class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400"
+              class:list={[
+                { "text-black dark:text-white": bgColor },
+                { "text-black": !bgColor },
+                "max-w-3xl mx-auto sm:text-center text-xl text-muted",
+              ]}
               set:html={subtitle}
             />
           )}
@@ -65,7 +81,14 @@ const {
       <div class="md:basis-1/2 self-center">
         {
           content && (
-            <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />
+            <div
+              class:list={[
+                { "text-black dark:text-slate-400": bgColor },
+                { "text-slate-400 dark:text-black": !bgColor },
+                "mb-12 text-lg",
+              ]}
+              set:html={content}
+            />
           )
         }
 
@@ -75,7 +98,13 @@ const {
               {items.map(({ title: title2, description, icon }) => (
                 <div class="flex">
                   <div class="flex-shrink-0">
-                    <div class="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-gray-50">
+                    <div
+                      class:list={[
+                        { "text-black dark:text-gray-50": bgColor },
+                        { "text-gray-50 dark:text-black": !bgColor },
+                        "flex h-7 w-7 items-center justify-center rounded-full bg-primary",
+                      ]}
+                    >
                       <Icon
                         name={icon ? icon : "tabler:check"}
                         class="w-5 h-5"
@@ -84,13 +113,23 @@ const {
                   </div>
                   <div class="ml-4">
                     {title2 && (
-                      <h3 class="text-lg font-medium leading-6 dark:text-white">
+                      <h3
+                        class:list={[
+                          { "text-black dark:text-white": bgColor },
+                          { "text-black": !bgColor },
+                          "text-lg font-medium leading-6",
+                        ]}
+                      >
                         {title2}
                       </h3>
                     )}
                     {description && (
                       <p
-                        class="mt-2 text-muted dark:text-slate-400"
+                        class:list={[
+                          { "text-black dark:text-slate-400": bgColor },
+                          { "text-slate-400 dark:text-black": !bgColor },
+                          "mt-2 text-muted",
+                        ]}
                         set:html={description}
                       />
                     )}

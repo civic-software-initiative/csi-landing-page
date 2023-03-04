@@ -1,5 +1,10 @@
 ---
 import Content from "../base/Content.astro";
+
+export interface Props {
+  bgColor?: boolean;
+}
+const { bgColor = false } = Astro.props;
 ---
 
 <Content
@@ -24,4 +29,5 @@ import Content from "../base/Content.astro";
     src: import("../../assets/images/stock-photo-2.jpeg"),
     alt: "Stock Photo 2",
   }}
+  bgColor={bgColor}
 />

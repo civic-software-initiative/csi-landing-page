@@ -1,5 +1,10 @@
 ---
 import Content from "../base/Content.astro";
+
+export interface Props {
+  bgColor?: boolean;
+}
+const { bgColor = false } = Astro.props;
 ---
 
 <Content
@@ -9,10 +14,15 @@ import Content from "../base/Content.astro";
     src: import("../../assets/images/headshot-adam.png"),
     alt: "Adam Headshot",
   }}
+  bgColor={bgColor}
 >
   <Fragment slot="content">
     <h3
-      class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      class:list={[
+        { "text-black dark:text-slate-800": bgColor },
+        { "text-black": !bgColor },
+        "text-2xl font-bold tracking-tight sm:text-3xl mb-2",
+      ]}
     >
       Meet Adam
     </h3>
@@ -26,10 +36,15 @@ import Content from "../base/Content.astro";
     src: import("../../assets/images/headshot-nikhil.png"),
     alt: "Nikhil Headshot",
   }}
+  bgColor={bgColor}
 >
   <Fragment slot="content">
     <h3
-      class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      class:list={[
+        { "text-black dark:text-white": bgColor },
+        { "text-black": !bgColor },
+        "text-2xl font-bold tracking-tight sm:text-3xl mb-2",
+      ]}
     >
       Meet Nikhil
     </h3>
@@ -42,10 +57,15 @@ import Content from "../base/Content.astro";
     src: import("../../assets/images/headshot-sam.png"),
     alt: "Sam Headshot",
   }}
+  bgColor={bgColor}
 >
   <Fragment slot="content">
     <h3
-      class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      class:list={[
+        { "text-black dark:text-white": bgColor },
+        { "text-black": !bgColor },
+        "text-2xl font-bold tracking-tight sm:text-3xl mb-2",
+      ]}
     >
       Meet Sam
     </h3>
