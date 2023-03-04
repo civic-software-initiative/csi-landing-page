@@ -1,0 +1,27 @@
+---
+import Content from "../base/Content.astro";
+---
+
+<Content
+  isReversed
+  highlight="Services"
+  title="What can we help with?"
+  items={[
+    {
+      title: "Here is a thing we can help with",
+      description: "Think of it like this",
+    },
+    {
+      title: "Here is another thing we can help with",
+      description: "Some more information to help you understand this thing",
+    },
+    {
+      title: "Yet another thing we can help with",
+      description: "Okay, you get the idea",
+    },
+  ]}
+  image={{
+    src: import("../../assets/images/stock-photo-2.jpeg"),
+    alt: "Stock Photo 2",
+  }}
+/>
