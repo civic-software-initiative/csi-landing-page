@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+import footerImage from "../../assets/images/footer.jpeg";
+const widths = [450, 800, 1200];
+const sizes = "100vw";
+
+const links = [
+  {
+    url: "https://civicsoftwareinitiative.org/",
+    description: "CSI Official Website",
+    icon: "mdi:home",
+  },
+  {
+    url: "https://github.com/civic-software-initiative",
+    description: "CSI GitHub Organization",
+    icon: "fa-brands:github-alt",
+  },
+];
+---
+
+<footer class="relative flex h-64 items-center justify-center">
+  <div class="absolute inset-0 overflow-hidden">
+    <Picture
+      class="object-cover w-full h-full"
+      src={footerImage}
+      widths={widths}
+      sizes={sizes}
+      aspectRatio="2400:500"
+      alt="Footer Image"
+    />
+  </div>
+  <ul class="relative grid grid-cols-2 gap-4 sm:grid-cols-2">
+    {
+      links.map((link) => (
+        <li>
+          <a
+            class="flex text-white h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4"
+            href={link.url}
+          >
+            <span class="sr-only">{link.description}</span>
+            <Icon class="h-full text-white" name={link.icon} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</footer>
