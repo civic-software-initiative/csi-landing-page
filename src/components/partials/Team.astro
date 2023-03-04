@@ -4,7 +4,7 @@ import Content from "../base/Content.astro";
 
 <Content
   highlight="Team"
-  title="Meet the team"
+  title="Meet the Team"
   image={{
     src: import("../../assets/images/headshot-adam.png"),
     alt: "Adam Headshot",
@@ -21,6 +21,7 @@ import Content from "../base/Content.astro";
 </Content>
 <Content
   isReversed
+  isAfterContent
   image={{
     src: import("../../assets/images/headshot-nikhil.png"),
     alt: "Nikhil Headshot",
@@ -36,6 +37,7 @@ import Content from "../base/Content.astro";
   </Fragment>
 </Content>
 <Content
+  isAfterContent
   image={{
     src: import("../../assets/images/headshot-sam.png"),
     alt: "Sam Headshot",
