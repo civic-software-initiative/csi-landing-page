@@ -1,0 +1,52 @@
+---
+import Content from "../base/Content.astro";
+---
+
+<Content
+  highlight="Team"
+  title="Meet the team"
+  image={{
+    src: import("../../assets/images/headshot-adam.png"),
+    alt: "Adam Headshot",
+  }}
+>
+  <Fragment slot="content">
+    <h3
+      class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+    >
+      Meet Adam
+    </h3>
+    Stuff about Adam.
+  </Fragment>
+</Content>
+<Content
+  isReversed
+  image={{
+    src: import("../../assets/images/headshot-nikhil.png"),
+    alt: "Nikhil Headshot",
+  }}
+>
+  <Fragment slot="content">
+    <h3
+      class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+    >
+      Meet Nikhil
+    </h3>
+    Stuff about Nikhil.
+  </Fragment>
+</Content>
+<Content
+  image={{
+    src: import("../../assets/images/headshot-sam.png"),
+    alt: "Sam Headshot",
+  }}
+>
+  <Fragment slot="content">
+    <h3
+      class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+    >
+      Meet Sam
+    </h3>
+    Stuff about Sam.
+  </Fragment>
+</Content>
