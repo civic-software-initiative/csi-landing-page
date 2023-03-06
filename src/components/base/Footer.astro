@@ -22,7 +22,7 @@ const links = [
 <footer class="sticky top-[100vh] flex h-64 items-center justify-center">
   <div class="absolute inset-0 overflow-hidden">
     <Picture
-      class="object-cover w-full h-full"
+      class="h-full w-full object-cover"
       src={footerImage}
       widths={widths}
       sizes={sizes}
@@ -35,7 +35,7 @@ const links = [
       links.map((link) => (
         <li>
           <a
-            class="flex text-white h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4"
+            class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4 text-white"
             href={link.url}
           >
             <span class="sr-only">{link.description}</span>

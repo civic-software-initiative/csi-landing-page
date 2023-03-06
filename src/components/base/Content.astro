@@ -41,7 +41,7 @@ const {
   <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
     {
       (title || subtitle || highlight) && (
-        <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        <div class="mb-10 max-w-3xl text-center md:mx-auto md:mb-12">
           {highlight && (
             <p
               class:list={[
@@ -78,7 +78,7 @@ const {
   </div>
   <div class="mx-auto max-w-7xl p-4 md:px-8">
     <div class={`md:flex ${isReversed ? "md:flex-row-reverse" : ""} md:gap-16`}>
-      <div class="md:basis-1/2 self-center">
+      <div class="self-center md:basis-1/2">
         {
           content && (
             <div
@@ -107,7 +107,7 @@ const {
                     >
                       <Icon
                         name={icon ? icon : "tabler:check"}
-                        class="w-5 h-5"
+                        class="h-5 w-5"
                       />
                     </div>
                   </div>

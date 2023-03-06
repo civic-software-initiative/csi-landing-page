@@ -37,35 +37,35 @@ const links = [
   id="header"
 >
   <div
-    class="py-3 px-3 md:py-3.5 md:px-4 mx-auto w-full md:flex md:justify-between max-w-7xl"
+    class="mx-auto w-full max-w-7xl py-3 px-3 md:flex md:justify-between md:py-3.5 md:px-4"
   >
     <div class:list={[{ "mr-auto": false }, "flex justify-between"]}>
       <a class="flex items-center" href="/">
-        <img class="w-8/12 h-8/12" src="/logo_with_text.svg" />
+        <img class="h-8/12 w-8/12" src="/logo_with_text.svg" />
       </a>
       <div class="flex items-center md:hidden">
         <button
           type="button"
-          class="ml-1.5 text-violet-purple hover:text-red focus:outline-none focus:ring-4 focus:ring-violet-purple rounded-lg text-sm p-2.5 inline-flex items-center transition"
+          class="ml-1.5 inline-flex items-center rounded-lg p-2.5 text-sm text-violet-purple transition hover:text-red focus:outline-none focus:ring-4 focus:ring-violet-purple"
           aria-label="Toggle Menu"
           data-aw-toggle-menu
         >
-          <Icon name="tabler:menu" class="w-6 h-6" optimize={false} />
+          <Icon name="tabler:menu" class="h-6 w-6" optimize={false} />
         </button>
       </div>
     </div>
     <nav
-      class="items-center w-full md:w-auto hidden md:flex dark:text-slate-200 h-[calc(100vh-72px)] md:h-auto overflow-y-auto md:overflow-visible md:mx-5"
+      class="hidden h-[calc(100vh-72px)] w-full items-center overflow-y-auto dark:text-slate-200 md:mx-5 md:flex md:h-auto md:w-auto md:overflow-visible"
       aria-label="Main navigation"
     >
       <ul
-        class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base"
+        class="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base"
       >
         {
           links.map(({ title, href }) => (
             <li class="">
               <a
-                class="font-medium text-violet-purple hover:text-red px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                class="flex items-center px-4 py-3 font-medium text-violet-purple transition duration-150 ease-in-out hover:text-red"
                 href={href}
               >
                 {title}
