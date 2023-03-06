@@ -1,13 +1,22 @@
-# Astro with Tailwind
+# CSI Landing Page
 
-```
-npm create astro@latest -- --template with-tailwindcss
-```
+Built on [astro](https://docs.astro.build/en/getting-started/) + [tailwind](https://tailwindcss.com/docs/installation)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-tailwindcss/devcontainer.json)
+## Commands
 
-Astro comes with [Tailwind](https://tailwindcss.com) support out of the box. This example showcases how to style your Astro project with Tailwind.
+| Command             | Action                                            |
+| :------------------ | :------------------------------------------------ |
+| `npm install`       | Install dependencies                              |
+| `npm run dev`       | Start local dev server at `localhost:3000`        |
+| `npm run build`     | Build your production site to `./dist/`           |
+| `npm run preview`   | Preview your build locally, before deploying      |
+| `npm run astro ...` | Run CLI commands like `astro add`, `astro check`  |
+| `npm run format`    | Format code with [prettier](https://prettier.io/) |
 
-For complete setup instructions, please see our [Tailwind Integration Guide](https://docs.astro.build/en/guides/integrations-guide/tailwind).
+## Credits
+
+- Stock images from [pexels](https://www.pexels.com/)
+- Template components and inspiration from:
+  - [astrowind](https://github.com/onwidget/astrowind)
+  - [astroship](https://github.com/surjithctly/astroship)
+  - [astro-landing-page](https://github.com/mhyfritz/astro-landing-page)
