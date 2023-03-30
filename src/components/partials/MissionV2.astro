@@ -1,0 +1,22 @@
+---
+import { Picture } from "@astrojs/image/components";
+
+import hands_circle from '../../assets/images/hands-circle.png';
+---
+
+<div class="bg-primary w-full">
+  <div class="flex flex-row">
+    <Picture widths={[400, 800]} aspectRatio={"1:1"} sizes="(max-width: 800px) 66vw, 800px" src={hands_circle} alt="hands_circle" />
+    <div class="flex flex-col justify-center px-12">
+      <h1 class="text-xl text-base-100 pb-4">Our Mission</h1>
+      <p class="text-3xl text-base-100 pb-8">
+        To apply technological expertise towards building a more globally equitable society.
+      </p>
+      <p class="text-xl text-base-100 pb-8">
+        Every non-profit and civic organization should have access to the software tools
+        they need to fulfill their mission without breaking the bank.
+      </p>
+      <button class="btn btn-outline btn-accent w-1/4">Learn More →</button>
+    </div>
+  </div>
+</div>
