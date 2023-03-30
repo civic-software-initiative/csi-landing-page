@@ -1,0 +1,72 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<header
+  class:list={[
+    { sticky: true, relative: false },
+    "bg-base-100 opacity-75 top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100",
+  ]}
+  id="header"
+>
+  <div
+    class="mx-auto w-full max-w-7xl py-3 px-3 md:flex md:justify-between md:py-3.5 md:px-4"
+  >
+    <div class:list={[{ "mr-auto": false }, "flex justify-between"]}>
+      <a class="flex items-center" href="/">
+        <img class="h-8/12 w-8/12" src="/logo_with_text.svg" />
+      </a>
+      <div class="flex items-center md:hidden">
+        <button
+          type="button"
+          class="ml-1.5 inline-flex items-center rounded-lg p-2.5 text-sm text-primary transition hover:text-red focus:outline-none focus:ring-4 focus:ring-primary"
+          aria-label="Toggle Menu"
+          data-aw-toggle-menu
+        >
+          <Icon name="tabler:menu" class="h-6 w-6" optimize={false} />
+        </button>
+      </div>
+    </div>
+    <nav
+      class="hidden h-[calc(100vh-72px)] w-full items-center overflow-y-auto md:mx-5 md:flex md:h-auto md:w-auto md:overflow-visible"
+      aria-label="Main navigation"
+    >
+      <ul
+        class="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base"
+      >
+        <li class="">
+          <a
+            class="flex items-center px-5 py-3 font-medium text-black transition duration-150 ease-in-out hover:text-red"
+            href="/what-we-do"
+          >
+            What we do
+          </a>
+        </li>
+        <li class="">
+          <a
+            class="flex items-center px-5 py-3 font-medium text-black transition duration-150 ease-in-out hover:text-red"
+            href="/who-we-are"
+          >
+            Who we are
+          </a>
+        </li>
+        <li class="">
+          <a
+            class="flex items-center px-5 py-3 font-medium text-black transition duration-150 ease-in-out hover:text-red"
+            href="/how-we-work"
+          >
+            How we work
+          </a>
+        </li>
+        <li class="">
+          <a
+            class="flex items-center px-5 py-3 btn btn-primary"
+            href="/partner-with-us"
+          >
+            Partner with us
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
