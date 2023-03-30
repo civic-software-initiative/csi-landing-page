@@ -16,9 +16,9 @@ module.exports = {
       {
         csi: {
           "primary": "#3D0080",
-          "secondary": "#082E4A",
+          "secondary": "#6E99BA",
           "accent": "#D6E8FA",
-          "neutral": "#3D4451",
+          "neutral": "#082E4A",
           "base-100": "#FFFFFF",
           "info": "#3ABFF8",
           "success": "#36D399",

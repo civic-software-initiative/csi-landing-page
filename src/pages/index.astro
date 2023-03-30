@@ -3,17 +3,15 @@ import { Picture } from "@astrojs/image/components";
 
 import Base from "../layouts/Base.astro";
 import HeroV2 from "../components/partials/HeroV2.astro";
+import WhatWeDoV2 from "../components/partials/WhatWeDoV2.astro";
 import Services from "../components/partials/Services.astro";
 import Team from "../components/partials/Team.astro";
-
-const hero_image = {
-    src: import("../assets/images/stock-photo-1.jpeg"),
-    alt: "Stock Photo 1",
-};
 ---
 
 <Base>
   <HeroV2 />
+  <WhatWeDoV2 />
+  <div class="divider"></div>
   <Services bgColor={true} />
   <Team />
 </Base>
