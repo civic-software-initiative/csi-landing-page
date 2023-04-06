@@ -1,5 +1,6 @@
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}","./src/**/*.{html,js}",
+  "./node_modules/tw-elements/dist/js/**/*.js"],
   theme: {
     extend: {
       colors: {
@@ -28,5 +29,7 @@ module.exports = {
       }
     ]
   },
+  plugins: [require("tw-elements/dist/plugin")],
   plugins: [require("daisyui")],
+  
 };
