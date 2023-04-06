@@ -2,16 +2,20 @@
 import Base from "../layouts/Base.astro";
 import HeroV2 from "../components/partials/HeroV2.astro";
 import WhatWeDoV2 from "../components/partials/WhatWeDoV2.astro";
+import Testimonials from "../components/partials/Testimonials.astro";
 import MissionV2 from "../components/partials/MissionV2.astro";
 import Services from "../components/partials/Services.astro";
 import Team from "../components/partials/Team.astro";
+import Contact from "./contact.astro";
 ---
 
 <Base>
   <HeroV2 />
   <WhatWeDoV2 />
+<!--  <Testimonials /> --> 
   <MissionV2 />
   <div class="divider"></div>
   <Services bgColor={true} />
   <Team />
+  <Contact />
 </Base>
