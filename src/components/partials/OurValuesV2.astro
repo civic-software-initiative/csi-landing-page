@@ -1,67 +1,107 @@
 ---
 import { Picture } from "@astrojs/image/components";
 
-import always_open from '../../assets/images/values-always-open.png';
-import optimizing_impact from '../../assets/images/values-optimizing-impact.png';
-import simplicity from '../../assets/images/values-simplicity.png';
-import teachers_not_technocrats from '../../assets/images/values-teachers-not-technocrats.png';
-import teams_not_hierarchies from '../../assets/images/values-teams-not-hierarchies.png';
+import always_open from "../../assets/images/values-always-open.png";
+import optimizing_impact from "../../assets/images/values-optimizing-impact.png";
+import simplicity from "../../assets/images/values-simplicity.png";
+import teachers_not_technocrats from "../../assets/images/values-teachers-not-technocrats.png";
+import teams_not_hierarchies from "../../assets/images/values-teams-not-hierarchies.png";
 ---
 
 <div class="bg-base-100 py-16 px-8">
-  <h1 class="text-4xl text-secondary text-left py-2">Our values</h1>
-  <div class="flex flex-row justify-evenly py-12">
-    <div class="flex flex-row justify-center w-1/3">
-      <Picture widths={[400]} aspectRatio={"5:4"} sizes="(max-width: 400px) 100vw, 400px" src={optimizing_impact} alt="optimizing_impact" />
-      <div class="flex flex-col justify-top px-4">
+  <h1 class="py-2 px-24 text-left text-4xl text-secondary">Our values</h1>
+  <div class="flex flex-row justify-evenly px-24 py-6">
+    <div class="flex flex-row justify-center">
+      <Picture
+        widths={[400]}
+        aspectRatio={"5:4"}
+        sizes="(max-width: 400px) 100vw, 400px"
+        src={optimizing_impact}
+        alt="optimizing_impact"
+      />
+      <div class="justify-top flex flex-col px-4">
         <h1 class="text-sm text-neutral">Optimizing for impact</h1>
         <div class="h-0.5 w-full bg-secondary"></div>
         <p class="text-xs text-neutral">
-          Time is precious, and there is a lot of need out there. We are intentional about whom we help and how. To maximize our impact in the space, we need to be conscientious allies to a diverse community.
+          Time is precious, and there is a lot of need out there. We are
+          intentional about whom we help and how. To maximize our impact in the
+          space, we need to be conscientious allies to a diverse community.
         </p>
       </div>
     </div>
-    <div class="flex flex-row justify-center w-1/3">
-      <Picture widths={[400]} aspectRatio={"5:4"} sizes="(max-width: 400px) 100vw, 400px" src={teams_not_hierarchies} alt="teams_not_hierarchies" />
-      <div class="flex flex-col justify-top px-4">
-        <h1 class="text-sm text-neutral">Teams not Hierarchies</h1>
+    <div class="flex flex-row justify-center">
+      <Picture
+        widths={[400]}
+        aspectRatio={"5:4"}
+        sizes="(max-width: 400px) 100vw, 400px"
+        src={teachers_not_technocrats}
+        alt="teachers_not_technocrats"
+      />
+      <div class="justify-top flex flex-col px-4">
+        <h1 class="text-sm text-neutral">Teachers not technocrats</h1>
         <div class="h-0.5 w-full bg-secondary"></div>
         <p class="text-xs text-neutral">
-          At CSI, we believe innovation and creativity come from tightly collaborative, self-sufficient teams.
-        </p>
-      </div>
-    </div>
-    <div class="flex flex-row justify-center w-1/3">
-      <Picture widths={[400]} aspectRatio={"5:4"} sizes="(max-width: 400px) 100vw, 400px" src={simplicity} alt="simplicity" />
-      <div class="flex flex-col justify-top px-4">
-        <h1 class="text-sm text-neutral">Simplicity</h1>
-        <div class="h-0.5 w-full bg-secondary"></div>
-        <p class="text-xs text-neutral">
-          We strive for simple, effective, and sustainable solutions that empower our clients to focus on their domain expertise, not maintain our contribution. 
+          We’re not trying to impress anyone with our sophistication. We want to
+          empower our clients through mentorship, guidance, and by fostering a
+          mentality of self-service.
         </p>
       </div>
     </div>
   </div>
-  <div class="flex flex-row justify-evenly px-24">
+  <div class="flex flex-row justify-evenly px-24 py-6">
     <div class="flex flex-row justify-center">
-      <Picture widths={[400]} aspectRatio={"5:4"} sizes="(max-width: 400px) 100vw, 400px" src={teachers_not_technocrats} alt="teachers_not_technocrats" />
-      <div class="flex flex-col justify-top px-4">
-        <h1 class="text-sm text-neutral">Teachers not technocrats</h1>
+      <Picture
+        widths={[400]}
+        aspectRatio={"5:4"}
+        sizes="(max-width: 400px) 100vw, 400px"
+        src={simplicity}
+        alt="simplicity"
+      />
+
+      <div class="justify-top flex flex-col px-4">
+        <h1 class="text-sm text-neutral">Simplicity</h1>
         <div class="h-0.5 w-full bg-secondary"></div>
         <p class="text-xs text-neutral">
-          We’re not trying to impress anyone with our sophistication.
-          We want to empower our clients through mentorship, guidance, and by fostering a mentality of self-service.
+          We strive for simple, effective, and sustainable solutions that
+          empower our clients to focus on their domain expertise, not maintain
+          our contribution.
         </p>
       </div>
     </div>
     <div class="flex flex-row justify-center">
-      <Picture widths={[400]} aspectRatio={"5:4"} sizes="(max-width: 400px) 100vw, 400px" src={always_open} alt="always_open" />
-      <div class="flex flex-col justify-top px-4">
+      <Picture
+        widths={[400]}
+        aspectRatio={"5:4"}
+        sizes="(max-width: 400px) 100vw, 400px"
+        src={always_open}
+        alt="always_open"
+      />
+      <div class="justify-top flex flex-col px-4">
         <h1 class="text-sm text-neutral">Always open</h1>
         <div class="h-0.5 w-full bg-secondary"></div>
         <p class="text-xs text-neutral">
-          When we build tools, we are intentional about open source licensing, and encourage our collaborators to act in kind.
-          We promote financial transparency and collaboration.
+          When we build tools, we are intentional about open source licensing,
+          and encourage our collaborators to act in kind. We promote financial
+          transparency and collaboration.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-row justify-evenly px-24 py-6">
+    <div class="flex w-5/12 flex-row justify-center">
+      <Picture
+        widths={[400]}
+        aspectRatio={"5:4"}
+        sizes="(max-width: 400px) 100vw, 400px"
+        src={teams_not_hierarchies}
+        alt="teams_not_hierarchies"
+      />
+      <div class="justify-top flex flex-col px-4">
+        <h1 class="text-sm text-neutral">Teams not Hierarchies</h1>
+        <div class="h-0.5 w-full bg-secondary"></div>
+        <p class="text-xs text-neutral">
+          At CSI, we believe innovation and creativity come from tightly
+          collaborative, self-sufficient teams.
         </p>
       </div>
     </div>
