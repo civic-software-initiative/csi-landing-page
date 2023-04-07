@@ -1,5 +1,6 @@
 ---
 import Content from "../base/Content.astro";
+import BasicScripts from "../base/BasicScripts.astro";
 ---
 
 <div class="flex flex-wrap">
@@ -21,7 +22,7 @@ import Content from "../base/Content.astro";
         <input
           type="text"
           class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-base-100 transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
-          id="exampleInput7"
+          id="nameInput"
           placeholder="Name"
         />
       </div>
@@ -29,14 +30,14 @@ import Content from "../base/Content.astro";
         <input
           type="email"
           class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-base-100 transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
-          id="exampleInput8"
+          id="emailInput"
           placeholder="Email address"
         />
       </div>
       <div class="form-group mb-6">
         <textarea
           class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
-          id="exampleFormControlTextarea13"
+          id="bodyInput"
           rows="3"
           placeholder="Message"></textarea>
       </div>
@@ -44,6 +45,7 @@ import Content from "../base/Content.astro";
       <button
         type="submit"
         class="w-full rounded bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-base-100 shadow-md transition duration-150 ease-in-out hover:bg-secondary hover:shadow-lg focus:bg-secondary focus:shadow-lg focus:outline-none focus:ring-0 active:bg-secondary active:shadow-lg"
+        onclick="transmitMessage({'name':document.getElementById('nameInput').value, 'email':document.getElementById('emailInput'),'message':document.getElementById('bodyInput')})"
         >Send</button
       >
     </form>
