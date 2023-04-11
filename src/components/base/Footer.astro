@@ -1,9 +1,5 @@
 ---
 import { Icon } from "astro-icon";
-import { Picture } from "@astrojs/image/components";
-import footerImage from "../../assets/images/footer.jpeg";
-const widths = [450, 800, 1200];
-const sizes = "100vw";
 
 const links = [
   {
@@ -14,7 +10,7 @@ const links = [
   {
     url: "https://github.com/civic-software-initiative",
     description: "CSI GitHub Organization",
-    icon: "fa-brands:github-alt",
+    icon: "fa-brands:github",
   },
   {
     url: "https://www.linkedin.com/company/civic-software-initiative",
@@ -24,30 +20,39 @@ const links = [
 ];
 ---
 
-<footer class="sticky top-[100vh] flex h-64 items-center justify-center">
-  <div class="absolute inset-0 overflow-hidden">
-    <Picture
-      class="h-full w-full object-cover"
-      src={footerImage}
-      widths={widths}
-      sizes={sizes}
-      aspectRatio="2400:500"
-      alt="Footer Image"
-    />
+<footer class="sticky top-[100vh] flex h-64 justify-evenly bg-secondary">
+  <div class="flex flex-col pt-16">
+    <h3 class="text-lg font-bold text-base-100">WHAT WE DO</h3>
+    <a class="text-base text-base-100" href="/">Digital strategy</a>
+    <a class="text-base text-base-100" href="/">Engineering</a>
   </div>
-  <ul class="relative grid grid-cols-2 gap-4 sm:grid-cols-2">
-    {
-      links.map((link) => (
-        <li>
-          <a
-            class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4 text-white"
-            href={link.url}
-          >
-            <span class="sr-only">{link.description}</span>
-            <Icon class="h-full text-white" name={link.icon} />
-          </a>
-        </li>
-      ))
-    }
-  </ul>
+  <div class="flex flex-col pt-16">
+    <h3 class="text-lg font-bold text-base-100">WHO WE HELP</h3>
+    <a class="text-base text-base-100" href="/">Out target client</a>
+  </div>
+  <div class="flex flex-col pt-16">
+    <h3 class="text-lg font-bold text-base-100">HOW WE WORK</h3>
+    <a class="text-base text-base-100" href="/about-us">About CSI</a>
+    <a class="text-base text-base-100" href="/who-we-are">Meet our team</a>
+    <a class="text-base text-base-100" href="/how-we-work">Mission & Values</a>
+    <a class="text-base text-base-100" href="/contact-us">Contact us</a>
+  </div>
+  <div class="flex flex-col pt-10">
+    <ul class="flex flex-row justify-end">
+      {
+        links.map((link) => (
+          <li class="px-2">
+            <a
+              class="px-6 text-white"
+              href={link.url}
+            >
+              <span class="sr-only">{link.description}</span>
+              <Icon name={link.icon} />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <a class="flex flex-row btn btn-outline btn-accent w-full" href="/contact-us">Partner with us →</a>
+  </div>
 </footer>
