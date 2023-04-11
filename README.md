@@ -12,6 +12,8 @@ Built on [astro](https://docs.astro.build/en/getting-started/) + [tailwind](http
 | `npm run preview`   | Preview your build locally, before deploying      |
 | `npm run astro ...` | Run CLI commands like `astro add`, `astro check`  |
 | `npm run format`    | Format code with [prettier](https://prettier.io/) |
+|                     |                                                   |
+| `make deploy`       | Build assets and deploy to aws                    |
 
 ## Credits
 
