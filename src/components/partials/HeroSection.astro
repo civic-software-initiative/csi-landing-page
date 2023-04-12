@@ -2,28 +2,31 @@
 import { Picture } from "@astrojs/image/components";
 
 const hero_image = {
-    src: import("../../assets/images/hero-infrastructure.png"),
-    alt: "Stock Photo 1",
+  src: import("../../assets/images/hero-infrastructure.png"),
+  alt: "Stock Photo 1",
 };
 ---
 
 <div class="hero bg-base-100 py-12 px-12">
-  <div class="hero-content flex-row ">
+  <div class="hero-content flex-row">
     <Picture
       class="max-w-sm rounded-lg shadow-2xl"
       width={500}
       height={400}
-      widths={[200,500]}
+      widths={[200, 500]}
       sizes="(max-width: 800px) 200vw, 832px"
       aspectRatio="500:400"
       {...hero_image}
     />
     <div class="pl-20">
       <h1 class="text-4xl text-secondary">Our purpose</h1>
-      <p class="text-lg pt-2 pb-8">
-        We provide custom software solutions to non-profits without the big tech price tag
+      <p class="pt-2 pb-8 text-lg">
+        We provide custom software solutions to non-profits without the big tech
+        price tag
       </p>
-      <a class="btn btn-primary text-xl" href="/contact">Book a (free) consultation</a>
+      <a class="btn-primary btn text-xl" href="/contact"
+        >Book a (free) consultation</a
+      >
     </div>
   </div>
 </div>

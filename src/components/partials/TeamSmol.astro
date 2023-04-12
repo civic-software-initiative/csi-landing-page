@@ -1,41 +1,63 @@
 ---
 import { Picture } from "@astrojs/image/components";
 
-import adam from '../../assets/images/headshot-adam.png';
-import sam from '../../assets/images/headshot-sam.png';
-import nikhil from '../../assets/images/headshot-nikhil.png';
-
+import adam from "../../assets/images/headshot-adam.png";
+import sam from "../../assets/images/headshot-sam.png";
+import nikhil from "../../assets/images/headshot-nikhil.png";
 ---
 
+<!-- Section: Design Block -->
+<section class="mb-8 text-center text-gray-800">
+  <h2 class="mb-12 text-3xl font-bold">
+    Meet the <a class="text-blue-600" href="/who-we-are">team</a>
+  </h2>
 
-  <!-- Section: Design Block -->
-  <section class="mb-8 text-gray-800 text-center">
-    <h2 class="text-3xl font-bold mb-12">Meet the <a class="text-blue-600" href="/who-we-are">team</a></h2>
+  <div class="lg:gap-xl-12 grid gap-x-6 md:grid-cols-3 xl:grid-cols-3">
+    <div class="mb-12">
+      <Picture
+        widths={[400]}
+        aspectRatio={"1:1"}
+        sizes="(max-width: 100px) 100vw, 100px"
+        src={adam}
+        alt="adam-headshot"
+        class="mx-auto mb-4 rounded-full shadow-lg"
+      />
 
-    <div class="grid md:grid-cols-3 xl:grid-cols-3 gap-x-6 lg:gap-xl-12">
-      <div class="mb-12">
-        <Picture widths={[400]} aspectRatio={"1:1"} sizes="(max-width: 100px) 100vw, 100px" src={adam} alt="adam-headshot" class="rounded-full shadow-lg mx-auto mb-4"/>
-      
-        
-        <p class="font-bold mb-2">Adam Pickersgill</p>
-        <p class="text-gray-500 px-16">Executive Director,<br>Principal Product Manager</p>
-      </div>
-
-      <div class="mb-12">
-        <Picture widths={[400]} aspectRatio={"1:1"} sizes="(max-width: 100px) 100vw, 100px" src={sam} alt="sam-headshot" class="rounded-full shadow-lg mx-auto mb-4"/>
-      
-       
-        <p class="font-bold mb-2">Sam Alleva</p>
-        <p class="text-gray-500 px-16">Secretary, Treasurer,<br>Chief of Operations</p>
-      </div>
-
-      <div class="mb-12">
-        <Picture widths={[400]} aspectRatio={"1:1"} sizes="(max-width: 100px) 100vw, 100px" src={nikhil} alt="nikhil-headshot" class="rounded-full shadow-lg mx-auto mb-4"/>
-      
-        <p class="font-bold mb-2">Nikhil Vengal</p>
-        <p class="text-gray-500 px-16">Principal Software Engineer</p>
-      </div>
-      
+      <p class="mb-2 font-bold">Adam Pickersgill</p>
+      <p class="px-16 text-gray-500">
+        Executive Director,<br />Principal Product Manager
+      </p>
     </div>
-  </section>
-  <!-- Section: Design Block -->
+
+    <div class="mb-12">
+      <Picture
+        widths={[400]}
+        aspectRatio={"1:1"}
+        sizes="(max-width: 100px) 100vw, 100px"
+        src={sam}
+        alt="sam-headshot"
+        class="mx-auto mb-4 rounded-full shadow-lg"
+      />
+
+      <p class="mb-2 font-bold">Sam Alleva</p>
+      <p class="px-16 text-gray-500">
+        Secretary, Treasurer,<br />Chief of Operations
+      </p>
+    </div>
+
+    <div class="mb-12">
+      <Picture
+        widths={[400]}
+        aspectRatio={"1:1"}
+        sizes="(max-width: 100px) 100vw, 100px"
+        src={nikhil}
+        alt="nikhil-headshot"
+        class="mx-auto mb-4 rounded-full shadow-lg"
+      />
+
+      <p class="mb-2 font-bold">Nikhil Vengal</p>
+      <p class="px-16 text-gray-500">Principal Software Engineer</p>
+    </div>
+  </div>
+</section>
+<!-- Section: Design Block -->

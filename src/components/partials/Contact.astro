@@ -4,15 +4,15 @@ import BasicScripts from "../base/BasicScripts.astro";
 ---
 
 <script is:inline>
-function submitContactForm(messageParams){
-  fetch('https://nr9159tsv6.execute-api.us-east-1.amazonaws.com/contact-us', {
-    method: 'POST',
-    body: JSON.stringify(messageParams),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-}
+  function submitContactForm(messageParams) {
+    fetch("https://nr9159tsv6.execute-api.us-east-1.amazonaws.com/contact-us", {
+      method: "POST",
+      body: JSON.stringify(messageParams),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }
 </script>
 
 <div class="flex flex-wrap">
@@ -33,7 +33,7 @@ function submitContactForm(messageParams){
       <div class="form-group mb-6">
         <input
           type="text"
-          class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-black font-normal text-base-100 transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
+          class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 font-normal text-black text-base-100 transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
           id="nameInput"
           placeholder="Name"
         />
@@ -41,14 +41,14 @@ function submitContactForm(messageParams){
       <div class="form-group mb-6">
         <input
           type="email"
-          class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-black font-normal text-base-100 transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
+          class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 font-normal text-black text-base-100 transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
           id="emailInput"
           placeholder="Email address"
         />
       </div>
       <div class="form-group mb-6">
         <textarea
-          class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-black font-normal text-gray-700 transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
+          class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 font-normal text-black text-gray-700 transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
           id="bodyInput"
           rows="3"
           placeholder="Message"></textarea>

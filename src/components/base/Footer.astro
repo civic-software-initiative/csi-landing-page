@@ -42,11 +42,7 @@ const links = [
       {
         links.map((link) => (
           <li class="px-2">
-            <a
-              class="px-6 text-white"
-              href={link.url}
-              target="_blank"
-            >
+            <a class="px-6 text-white" href={link.url} target="_blank">
               <span class="sr-only">{link.description}</span>
               <Icon name={link.icon} />
             </a>
@@ -54,6 +50,8 @@ const links = [
         ))
       }
     </ul>
-    <a class="flex flex-row btn btn-outline btn-accent w-full" href="/contact">Partner with us →</a>
+    <a class="btn-outline btn-accent btn flex w-full flex-row" href="/contact"
+      >Partner with us →</a
+    >
   </div>
 </footer>
