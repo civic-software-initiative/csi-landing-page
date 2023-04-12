@@ -33,8 +33,8 @@ const {
 <section
   class:list={[
     { "pt-0 md:pt-0": isAfterContent },
-    { "bg-light-blue dark:bg-dark-slate-blue": bgColor },
-    { "bg-white dark:bg-slate-blue": !bgColor },
+    { "bg-secondary dark:bg-secondary": bgColor },
+    { "bg-white dark:bg-accent": !bgColor },
     "py-16 md:py-20",
   ]}
 >
@@ -45,7 +45,7 @@ const {
           {highlight && (
             <p
               class:list={[
-                { "text-black dark:text-white": bgColor },
+                { "text-white dark:text-white": bgColor },
                 { "text-black": !bgColor },
                 "text-base text-primary font-semibold tracking-wide uppercase",
               ]}
@@ -55,7 +55,7 @@ const {
           {title && (
             <h2
               class:list={[
-                { "text-black dark:text-slate-400": bgColor },
+                { "text-white dark:text-slate-400": bgColor },
                 { "text-slate-400 dark:text-black": !bgColor },
                 "text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading",
               ]}
@@ -65,7 +65,7 @@ const {
           {subtitle && (
             <p
               class:list={[
-                { "text-black dark:text-white": bgColor },
+                { "text-white dark:text-white": bgColor },
                 { "text-black": !bgColor },
                 "max-w-3xl mx-auto sm:text-center text-xl text-muted",
               ]}
@@ -83,7 +83,7 @@ const {
           content && (
             <div
               class:list={[
-                { "text-black dark:text-slate-400": bgColor },
+                { "text-gray-50 dark:text-slate-400": bgColor },
                 { "text-slate-400 dark:text-black": !bgColor },
                 "mb-12 text-lg",
               ]}
@@ -100,7 +100,7 @@ const {
                   <div class="flex-shrink-0">
                     <div
                       class:list={[
-                        { "text-black dark:text-gray-50": bgColor },
+                        { "text-gray-100 dark:text-gray-50": bgColor },
                         { "text-gray-50 dark:text-black": !bgColor },
                         "flex h-7 w-7 items-center justify-center rounded-full bg-primary",
                       ]}

@@ -1,12 +1,21 @@
 ---
 import Base from "../layouts/Base.astro";
-import About from "../components/partials/About.astro";
-import Services from "../components/partials/Services.astro";
-import Team from "../components/partials/Team.astro";
+import HeroSection from "../components/partials/HeroSection.astro";
+import WhatWeDo from "../components/partials/WhatWeDo.astro";
+import Testimonials from "../components/partials/Testimonials.astro";
+import Mission from "../components/partials/Mission.astro";
+import OurValues from "../components/partials/OurValues.astro";
+import Team from "../components/partials/TeamSmol.astro";
+import Contact from "../components/partials/Contact.astro";
 ---
 
 <Base>
-  <About />
-  <Services bgColor={true} />
+  <HeroSection />
+  <WhatWeDo />
+  <!--  <Testimonials /> -->
+  <Mission />
+  <OurValues />
+  <div class="divider"></div>
   <Team />
+  <Contact />
 </Base>
