@@ -1,38 +1,11 @@
 ---
 import { Icon } from "astro-icon";
-
-const links = [
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Services",
-    href: "/services",
-  },
-  {
-    title: "Handbook",
-    href: "/handbook",
-  },
-  {
-    title: "Team",
-    href: "/team",
-  },
-  {
-    title: "Financials",
-    href: "/financials",
-  },
-  {
-    title: "Contact",
-    href: "/contact",
-  },
-];
 ---
 
 <header
   class:list={[
     { sticky: true, relative: false },
-    "bg-slate-blue dark:bg-dark-slate-blue opacity-75 top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100",
+    "bg-base-100 top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100",
   ]}
   id="header"
 >
@@ -46,7 +19,7 @@ const links = [
       <div class="flex items-center md:hidden">
         <button
           type="button"
-          class="ml-1.5 inline-flex items-center rounded-lg p-2.5 text-sm text-violet-purple transition hover:text-red focus:outline-none focus:ring-4 focus:ring-violet-purple"
+          class="ml-1.5 inline-flex items-center rounded-lg p-2.5 text-sm text-primary transition hover:text-red focus:outline-none focus:ring-4 focus:ring-primary"
           aria-label="Toggle Menu"
           data-aw-toggle-menu
         >
@@ -55,24 +28,44 @@ const links = [
       </div>
     </div>
     <nav
-      class="hidden h-[calc(100vh-72px)] w-full items-center overflow-y-auto dark:text-slate-200 md:mx-5 md:flex md:h-auto md:w-auto md:overflow-visible"
+      class="hidden h-[calc(100vh-72px)] w-full items-center overflow-y-auto md:mx-5 md:flex md:h-auto md:w-auto md:overflow-visible"
       aria-label="Main navigation"
     >
       <ul
         class="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base"
       >
-        {
-          links.map(({ title, href }) => (
-            <li class="">
-              <a
-                class="flex items-center px-4 py-3 font-medium text-violet-purple transition duration-150 ease-in-out hover:text-red"
-                href={href}
-              >
-                {title}
-              </a>
-            </li>
-          ))
-        }
+        <li class="">
+          <a
+            class="flex items-center px-10 py-3 font-medium text-black transition duration-150 ease-in-out hover:text-red"
+            href="/what-we-do"
+          >
+            About Us
+          </a>
+        </li>
+        <li class="">
+          <a
+            class="flex items-center px-10 py-3 font-medium text-black transition duration-150 ease-in-out hover:text-red"
+            href="/who-we-are"
+          >
+            Our Team
+          </a>
+        </li>
+        <li class="">
+          <a
+            class="flex items-center px-10 py-3 font-medium text-black transition duration-150 ease-in-out hover:text-red"
+            href="/how-we-work"
+          >
+            Our Values
+          </a>
+        </li>
+        <li class="">
+          <a
+            class="flex items-center px-10 py-3 btn btn-primary"
+            href="/contact"
+          >
+            Partner with us
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
