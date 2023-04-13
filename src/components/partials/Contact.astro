@@ -1,8 +1,3 @@
----
-import Content from "../base/Content.astro";
-import BasicScripts from "../base/BasicScripts.astro";
----
-
 <script is:inline>
   function submitContactForm(messageParams) {
     fetch("https://nr9159tsv6.execute-api.us-east-1.amazonaws.com/contact-us", {
@@ -56,7 +51,7 @@ import BasicScripts from "../base/BasicScripts.astro";
 
       <button
         type="button"
-        class="w-full rounded bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-base-100 shadow-md transition duration-150 ease-in-out hover:bg-secondary hover:shadow-lg focus:bg-secondary focus:shadow-lg focus:outline-none focus:ring-0 active:bg-secondary active:shadow-lg"
+        class="btn btn-primary w-full px-6 py-2.5 normal-case text-base-100 hover:text-accent"
         onclick="submitContactForm({'name':document.getElementById('nameInput').value, 'email':document.getElementById('emailInput').value,'message':document.getElementById('bodyInput').value})"
         >Send</button
       >
