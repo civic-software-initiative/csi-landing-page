@@ -20,29 +20,29 @@ const links = [
 ];
 ---
 
-<footer class="sticky top-[100vh] flex h-64 justify-evenly bg-secondary">
-  <div class="flex flex-col pt-16">
+<footer class="sticky top-[100vh] flex pt-6 pb-10 justify-evenly bg-secondary">
+  <div class="flex flex-col pt-16 hidden">
     <h3 class="text-lg font-bold text-base-100">WHAT WE DO</h3>
     <a class="text-base text-base-100" href="/">Digital strategy</a>
     <a class="text-base text-base-100" href="/">Engineering</a>
   </div>
-  <div class="flex flex-col pt-16">
+  <div class="flex flex-col pt-16 hidden">
     <h3 class="text-lg font-bold text-base-100">WHO WE HELP</h3>
     <a class="text-base text-base-100" href="/">Out target client</a>
   </div>
-  <div class="flex flex-col pt-16">
+  <div class="flex flex-col pt-16 hidden">
     <h3 class="text-lg font-bold text-base-100">HOW WE WORK</h3>
     <a class="text-base text-base-100" href="/about-us">About CSI</a>
     <a class="text-base text-base-100" href="/who-we-are">Meet our team</a>
     <a class="text-base text-base-100" href="/how-we-work">Mission & Values</a>
     <a class="text-base text-base-100" href="/contact-us">Contact us</a>
   </div>
-  <div class="flex flex-col pt-10">
-    <ul class="flex flex-row justify-end">
+  <div class="flex flex-col">
+    <ul class="flex flex-row justify-center gap-3 py-4">
       {
         links.map((link) => (
-          <li class="px-2">
-            <a class="px-6 text-white" href={link.url} target="_blank">
+          <li class="w-1/5">
+            <a class="text-white" href={link.url} target="_blank">
               <span class="sr-only">{link.description}</span>
               <Icon name={link.icon} />
             </a>
@@ -51,7 +51,7 @@ const links = [
       }
     </ul>
     <a
-      class="btn-outline btn-accent btn flex w-full flex-row normal-case"
+      class="btn-outline btn-accent btn flex w-full flex-row normal-case text-xl"
       href="/contact">Partner with us →</a
     >
   </div>
