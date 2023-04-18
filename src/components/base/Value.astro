@@ -1,0 +1,29 @@
+---
+import { Picture } from "@astrojs/image/components";
+export interface Props {
+  title: string;
+  content?: string;
+  image: string | any;
+}
+const {
+  title,
+  content = await Astro.slots.render("content"),
+  image,
+} = Astro.props;
+---
+
+<div class="grid grid-cols-3">
+  <Picture
+    widths={[400]}
+    aspectRatio={"5:4"}
+    sizes="(max-width: 400px) 100vw, 400px"
+    {...image}
+  />
+  <div class="col-span-2 grid content-center px-10">
+    <h1 class="text-base text-neutral">{title}</h1>
+    <div class="h-0.5 w-full bg-secondary"></div>
+    <p class="text-sm text-neutral">
+      {content}
+    </p>
+  </div>
+</div>
