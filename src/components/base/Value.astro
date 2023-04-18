@@ -12,12 +12,12 @@ const {
 } = Astro.props;
 ---
 
-<div class="grid grid-cols-3">
-  <Image {...image} />
-  <div class="col-span-2 grid content-center px-10">
-    <h1 class="text-base text-neutral">{title}</h1>
-    <div class="h-0.5 w-full bg-secondary"></div>
-    <p class="text-sm text-neutral">
+<div class="flex flex-col items-left gap-4 pb-8">
+  <Image {...image} class="w-2/3" />
+  <div class="">
+    <h1 class="text-xl text-neutral">{title}</h1>
+    <div class="mt-2 mb-4 h-0.5 w-full bg-secondary"></div>
+    <p class="text-lg text-neutral">
       {content}
     </p>
   </div>
