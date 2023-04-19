@@ -4,20 +4,20 @@ import { Image } from "@astrojs/image/components";
 import hands_circle from "../../assets/images/hands-circle.png";
 ---
 
-<div class="flex w-full flex-col bg-primary">
-  <Image src={hands_circle} alt="hands_circle" />
-  <div class="flex flex-col justify-center px-12 py-8">
-    <h1 class="pb-4 text-4xl text-base-100">Our mission</h1>
-    <p class="pb-8 text-2xl text-base-100">
+<div class="flex w-full flex-col bg-primary md:flex-row">
+  <Image src={hands_circle} alt="hands_circle" class="h-full w-1/2" />
+  <div class="flex flex-col justify-center px-12 py-8 md:py-4">
+    <h1 class="pb-4 text-4xl text-base-100 md:text-3xl">Our mission</h1>
+    <p class="pb-8 text-2xl text-base-100 md:pb-4 md:text-xl">
       To apply technological expertise towards building a more globally
       equitable society.
     </p>
-    <p class="pb-8 text-lg text-base-100">
+    <p class="pb-8 text-lg text-base-100 md:pb-4 md:text-base">
       Every non-profit and civic organization should have access to the software
       tools they need to fulfill their mission without breaking the bank.
     </p>
     <a
-      class="btn-outline btn-accent btn text-lg normal-case"
+      class="btn-outline btn-accent btn text-lg normal-case md:text-base"
       href="/how-we-work">Learn more →</a
     >
   </div>
