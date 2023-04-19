@@ -11,24 +11,20 @@
 </script>
 
 <div class="flex flex-col">
-  <div
-    class="bg-primary px-12 py-8"
-  >
+  <div class="bg-primary px-12 py-8">
     <h2 class="pb-2 text-3xl font-bold text-base-100">Contact us</h2>
-    <p class="text-base-100 text-lg">
+    <p class="text-lg text-base-100">
       Let us know how we can partner with you, whether you're a client, a new
       recruit, or a collaborating partner organization. We're excited to hear
       from you!
     </p>
   </div>
-  <div
-    class="bg-base-100 px-12 py-4"
-  >
-    <form class="flex flex-col gap-4 my-4">
+  <div class="bg-base-100 px-12 py-4">
+    <form class="my-4 flex flex-col gap-4">
       <div class="form-group">
         <input
           type="text"
-          class="text-lg w-full form-control rounded border border-solid border-gray-300 bg-white transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
+          class="form-control w-full rounded border border-solid border-gray-300 bg-white text-lg transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
           id="nameInput"
           placeholder="Name"
         />
@@ -36,14 +32,14 @@
       <div class="form-group">
         <input
           type="email"
-          class="text-lg w-full form-control rounded border border-solid border-gray-300 bg-white  transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
+          class="form-control w-full rounded border border-solid border-gray-300 bg-white text-lg transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
           id="emailInput"
           placeholder="Email address"
         />
       </div>
       <div class="form-group">
         <textarea
-          class="text-lg w-full form-control rounded border border-solid border-gray-300 bg-white  transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
+          class="form-control w-full rounded border border-solid border-gray-300 bg-white text-lg transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
           id="bodyInput"
           rows="3"
           placeholder="Message"></textarea>
@@ -51,7 +47,7 @@
 
       <button
         type="button"
-        class="text-lg btn-primary btn w-full normal-case text-base-100 hover:text-accent"
+        class="btn-primary btn w-full text-lg normal-case text-base-100 hover:text-accent"
         onclick="submitContactForm({'name':document.getElementById('nameInput').value, 'email':document.getElementById('emailInput').value,'message':document.getElementById('bodyInput').value})"
         >Send</button
       >
