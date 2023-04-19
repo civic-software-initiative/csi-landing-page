@@ -10,40 +10,40 @@
   }
 </script>
 
-<div class="flex flex-wrap">
+<div class="flex flex-col">
   <div
-    class="mb-6 w-full shrink-0 grow-0 basis-auto bg-primary px-3 py-12 md:mb-0 md:w-6/12 lg:px-6"
+    class="bg-primary px-12 py-8"
   >
-    <h2 class="mb-6 text-3xl font-bold text-base-100">Contact us</h2>
-    <p class="mb-6 text-base-100">
+    <h2 class="pb-2 text-3xl font-bold text-base-100">Contact us</h2>
+    <p class="text-base-100 text-lg">
       Let us know how we can partner with you, whether you're a client, a new
       recruit, or a collaborating partner organization. We're excited to hear
       from you!
     </p>
   </div>
   <div
-    class="mb-12 w-full shrink-0 grow-0 basis-auto px-3 py-12 md:mb-0 md:w-6/12 lg:px-6"
+    class="bg-base-100 px-12 py-4"
   >
-    <form>
-      <div class="form-group mb-6">
+    <form class="flex flex-col gap-4 my-4">
+      <div class="form-group">
         <input
           type="text"
-          class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 font-normal text-black text-base-100 transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
+          class="text-lg w-full form-control rounded border border-solid border-gray-300 bg-white transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
           id="nameInput"
           placeholder="Name"
         />
       </div>
-      <div class="form-group mb-6">
+      <div class="form-group">
         <input
           type="email"
-          class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 font-normal text-black text-base-100 transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
+          class="text-lg w-full form-control rounded border border-solid border-gray-300 bg-white  transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
           id="emailInput"
           placeholder="Email address"
         />
       </div>
-      <div class="form-group mb-6">
+      <div class="form-group">
         <textarea
-          class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 font-normal text-black text-gray-700 transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
+          class="text-lg w-full form-control rounded border border-solid border-gray-300 bg-white  transition ease-in-out focus:border-secondary focus:bg-accent focus:text-gray-700 focus:outline-none"
           id="bodyInput"
           rows="3"
           placeholder="Message"></textarea>
@@ -51,7 +51,7 @@
 
       <button
         type="button"
-        class="btn-primary btn w-full px-6 py-2.5 normal-case text-base-100 hover:text-accent"
+        class="text-lg btn-primary btn w-full normal-case text-base-100 hover:text-accent"
         onclick="submitContactForm({'name':document.getElementById('nameInput').value, 'email':document.getElementById('emailInput').value,'message':document.getElementById('bodyInput').value})"
         >Send</button
       >
