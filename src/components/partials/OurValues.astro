@@ -8,82 +8,85 @@ import teachers_not_technocrats from "../../assets/images/values-teachers-not-te
 import teams_not_hierarchies from "../../assets/images/values-teams-not-hierarchies.png";
 ---
 
-<div class="bg-base-100 px-12">
-  <h1 class="py-8 text-left text-4xl text-secondary">Our values</h1>
-  <div class="grid grid-cols-2 md:grid-cols-4 md:gap-4">
-    <div class="col-span-2">
-      <Value
-        title="Optimizing for impact"
-        image={{
-          src: optimizing_impact,
-          alt: "Optimizing impact",
-        }}
-      >
-        <Fragment slot="content">
-          Time is precious, and there is a lot of need out there. We are
-          intentional about whom we help and how. To maximize our impact in the
-          space, we need to be conscientious allies to a diverse community.
-        </Fragment>
-      </Value>
-    </div>
-    <div class="col-span-2">
-      <Value
-        title="Teacher not technocrats"
-        image={{
-          src: teachers_not_technocrats,
-          alt: "Teachers not technocrats",
-        }}
-      >
-        <Fragment slot="content">
-          We’re not trying to impress anyone with our sophistication. We want to
-          empower our clients through mentorship, guidance, and by fostering a
-          mentality of self-service.
-        </Fragment>
-      </Value>
-    </div>
-    <div class="col-span-2">
-      <Value
-        title="Simplicity"
-        image={{
-          src: simplicity,
-          alt: "Simplicity",
-        }}
-      >
-        <Fragment slot="content">
-          We strive for simple, effective, and sustainable solutions that
-          empower our clients to focus on their domain expertise, not maintain
-          our contribution.
-        </Fragment>
-      </Value>
-    </div>
-    <div class="col-span-2">
-      <Value
-        title="Always open"
-        image={{
-          src: always_open,
-          alt: "Always open",
-        }}
-      >
-        <Fragment slot="content">
-          When we build tools, we are intentional about open source licensing,
-          and encourage our collaborators to act in kind. We promote financial
-          transparency and collaboration.
-        </Fragment>
-      </Value>
-    </div>
-    <div class="col-span-2 md:col-start-2 md:col-end-4">
-      <Value
-        title="Teams not hierarchies"
-        image={{
-          src: teams_not_hierarchies,
-          alt: "Teams not hierarchies",
-        }}
-      >
-        <Fragment slot="content">
-          At CSI, we believe innovation and creativity come from tightly
-          collaborative, self-sufficient teams.
-        </Fragment>
-      </Value>
+<div class="flex items-center justify-center bg-base-100">
+  <div class="max-w-7xl px-12">
+    <h1 class="py-8 text-left text-4xl text-secondary">Our values</h1>
+    <div class="grid grid-cols-2 md:grid-cols-4 md:gap-4">
+      <div class="col-span-2">
+        <Value
+          title="Optimizing for impact"
+          image={{
+            src: optimizing_impact,
+            alt: "Optimizing impact",
+          }}
+        >
+          <Fragment slot="content">
+            Time is precious, and there is a lot of need out there. We are
+            intentional about whom we help and how. To maximize our impact in
+            the space, we need to be conscientious allies to a diverse
+            community.
+          </Fragment>
+        </Value>
+      </div>
+      <div class="col-span-2">
+        <Value
+          title="Teacher not technocrats"
+          image={{
+            src: teachers_not_technocrats,
+            alt: "Teachers not technocrats",
+          }}
+        >
+          <Fragment slot="content">
+            We’re not trying to impress anyone with our sophistication. We want
+            to empower our clients through mentorship, guidance, and by
+            fostering a mentality of self-service.
+          </Fragment>
+        </Value>
+      </div>
+      <div class="col-span-2">
+        <Value
+          title="Simplicity"
+          image={{
+            src: simplicity,
+            alt: "Simplicity",
+          }}
+        >
+          <Fragment slot="content">
+            We strive for simple, effective, and sustainable solutions that
+            empower our clients to focus on their domain expertise, not maintain
+            our contribution.
+          </Fragment>
+        </Value>
+      </div>
+      <div class="col-span-2">
+        <Value
+          title="Always open"
+          image={{
+            src: always_open,
+            alt: "Always open",
+          }}
+        >
+          <Fragment slot="content">
+            When we build tools, we are intentional about open source licensing,
+            and encourage our collaborators to act in kind. We promote financial
+            transparency and collaboration.
+          </Fragment>
+        </Value>
+      </div>
+      <div class="col-span-2 md:col-start-2 md:col-end-4">
+        <Value
+          title="Teams not hierarchies"
+          image={{
+            src: teams_not_hierarchies,
+            alt: "Teams not hierarchies",
+          }}
+        >
+          <Fragment slot="content">
+            At CSI, we believe innovation and creativity come from tightly
+            collaborative, self-sufficient teams.
+          </Fragment>
+        </Value>
+      </div>
     </div>
   </div>
 </div>
