@@ -6,29 +6,33 @@ import puzzle from "../../assets/images/puzzle.png";
 ---
 
 <div class="bg-accent py-8 px-10">
-  <h1 class="pb-3 text-left text-4xl text-secondary">What we do</h1>
-  <p class="text-left text-2xl">
+  <h1 class="pb-3 text-left text-4xl text-secondary md:text-center md:text-2xl">
+    What we do
+  </h1>
+  <p class="text-left text-2xl md:text-center md:text-xl">
     We are partners on your digital journey, furthering your core mission and
     impact. We lend our software engineering expertise strategically to
     accelerate and support the work you are already doing to benefit our
     society.
   </p>
-  <div class="mt-28 flex flex-col justify-center gap-32 px-8">
+  <div
+    class="mt-28 flex flex-col justify-center gap-32 px-8 md:flex-row md:justify-between md:gap-5 md:px-0"
+  >
     <div class="flex flex-col items-center bg-base-100 drop-shadow-xl">
       <Image class="-mt-24 mb-4 w-2/3" src={examsheets} alt="examsheets" />
       <div class="items-left flex flex-col px-10 pb-6">
-        <h3 class="text-2xl text-secondary">Identify gaps</h3>
-        <p class="text-lg">
+        <h3 class="text-2xl text-secondary md:text-xl">Identify gaps</h3>
+        <p class="text-lg md:text-base">
           We interview your key stakeholders to examine the limits of your
           current tools - and how those limits may weaken your mission.
         </p>
       </div>
     </div>
     <div class="flex flex-col items-center bg-base-100 drop-shadow-xl">
-      <Image class="-mt-16 mb-8 w-2/3" src={laptop} alt="laptop" />
+      <Image class="-mt-16 mb-8 w-2/3 md:mb-9" src={laptop} alt="laptop" />
       <div class="items-left flex flex-col px-10 pb-6">
-        <h3 class="text-2xl text-secondary">Strategize</h3>
-        <p class="text-lg">
+        <h3 class="text-2xl text-secondary md:text-xl">Strategize</h3>
+        <p class="text-lg md:text-base">
           We determine where our expertise should be exercised, then develop and
           share a comprehensive plan to capture the most impactful
           opportunities.
@@ -38,8 +42,8 @@ import puzzle from "../../assets/images/puzzle.png";
     <div class="flex flex-col items-center bg-base-100 drop-shadow-xl">
       <Image class="-mt-24 mb-4 w-2/3" src={puzzle} alt="puzzle" />
       <div class="items-left flex flex-col px-10 pb-6">
-        <h3 class="text-2xl text-secondary">Build</h3>
-        <p class="text-lg">
+        <h3 class="text-2xl text-secondary md:text-xl">Build</h3>
+        <p class="text-lg md:text-base">
           We build the software that bridges any identified gaps and work with
           your team to develop expertise in your new custom built tools.
         </p>
