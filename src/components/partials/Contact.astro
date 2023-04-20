@@ -6,6 +6,8 @@
       headers: {
         "Content-Type": "application/json",
       },
+    }).then((_resp) => {
+      document.getElementById("contactUsButton").setAttribute("disabled", "disabled");
     });
   }
 </script>
@@ -50,6 +52,7 @@
 
         <button
           type="button"
+          id="contactUsButton"
           class="btn-primary btn w-full text-lg normal-case text-base-100 hover:text-accent"
           onclick="submitContactForm({'name':document.getElementById('nameInput').value, 'email':document.getElementById('emailInput').value,'message':document.getElementById('bodyInput').value})"
           >Send</button
