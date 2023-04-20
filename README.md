@@ -14,11 +14,3 @@ Built on [astro](https://docs.astro.build/en/getting-started/) + [tailwind](http
 | `npm run format`    | Format code with [prettier](https://prettier.io/) |
 |                     |                                                   |
 | `make deploy`       | Build assets and deploy to aws                    |
-
-## Credits
-
-- Stock images from [pexels](https://www.pexels.com/)
-- Template components and inspiration from:
-  - [astrowind](https://github.com/onwidget/astrowind)
-  - [astroship](https://github.com/surjithctly/astroship)
-  - [astro-landing-page](https://github.com/mhyfritz/astro-landing-page)
