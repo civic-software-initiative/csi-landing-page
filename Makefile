@@ -6,5 +6,5 @@ build:
 	npm run build
 
 deploy: clean build
-	aws s3 sync --delete dist s3://csiinfrastructurestack-websitebucket75c24d94-7hw9od41tilm
-	aws cloudfront create-invalidation --distribution-id E1JNGY3CII0WPM --paths "/*"
+	aws s3 sync --delete dist s3://csilandingpagestack-websitebucket75c24d94-acm0d1xyv87r
+	aws cloudfront create-invalidation --distribution-id E2HPAM435TB2AV --paths "/*"
