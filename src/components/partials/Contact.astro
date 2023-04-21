@@ -1,15 +1,14 @@
 <script is:inline>
   function submitContactForm(messageParams) {
+    document
+      .getElementById("contactUsButton")
+      .setAttribute("disabled", "disabled");
     fetch("https://nr9159tsv6.execute-api.us-east-1.amazonaws.com/contact-us", {
       method: "POST",
       body: JSON.stringify(messageParams),
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((_resp) => {
-      document
-        .getElementById("contactUsButton")
-        .setAttribute("disabled", "disabled");
     });
   }
 </script>
