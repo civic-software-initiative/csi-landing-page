@@ -55,6 +55,7 @@ const logo = {
         </li>
         <li class="">
           <a
+            id="partnerWithUsButton"
             class="btn-primary btn px-10 text-lg font-medium normal-case text-base-100 transition duration-150 ease-in-out hover:text-accent md:px-5 md:text-base"
             href="/#contact"
           >
@@ -65,3 +66,12 @@ const logo = {
     </nav>
   </div>
 </header>
+
+<script is:inline>
+  document.getElementById("partnerWithUsButton").addEventListener("click", (_event) => {
+    const hamburger = document.querySelector("[data-aw-toggle-menu]");
+    if (hamburger.classList.contains("expanded")) {
+      hamburger.click();
+    }
+  });
+</script>
