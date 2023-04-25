@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: "npm"
-          node-version-file: ".tool-versions"
+          node-version-file: ".node-version"
       - run: npm ci
       - run: npm run format
       - name: Commit changes
