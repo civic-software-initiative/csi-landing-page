@@ -1,9 +1,9 @@
-<div class="toast toast-top toast-center z-40 whitespace-nowrap">
-  <div id="errorToast" class="hidden alert alert-error">
-      <span>Failed to submit form</span>
+<div class="toast-center toast toast-top z-40 whitespace-nowrap">
+  <div id="errorToast" class="alert alert-error hidden">
+    <span>Failed to submit form</span>
   </div>
-  <div id="successToast" class="hidden alert alert-success">
-      <span>Form submitted</span>
+  <div id="successToast" class="alert alert-success hidden">
+    <span>Form submitted</span>
   </div>
 </div>
 
@@ -66,9 +66,9 @@
       const submitButton = document.getElementById("contactUsButton");
       submitButton.setAttribute("disabled", "disabled");
 
-      const name = document.getElementById('nameInput').value.trim();
-      const email = document.getElementById('emailInput').value.trim();
-      const message = document.getElementById('bodyInput').value.trim();
+      const name = document.getElementById("nameInput").value.trim();
+      const email = document.getElementById("emailInput").value.trim();
+      const message = document.getElementById("bodyInput").value.trim();
 
       const handleError = (_error) => {
         document.getElementById("errorToast").classList.remove("hidden");
@@ -78,17 +78,20 @@
       };
 
       try {
-        const response = await fetch("https://nr9159tsv6.execute-api.us-east-1.amazonaws.com/contact-us", {
-          method: "POST",
-          body: JSON.stringify({ name, email, message }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const response = await fetch(
+          "https://nr9159tsv6.execute-api.us-east-1.amazonaws.com/contact-us",
+          {
+            method: "POST",
+            body: JSON.stringify({ name, email, message }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
         if (response.ok) {
-          document.getElementById('nameInput').value = '';
-          document.getElementById('emailInput').value = '';
-          document.getElementById('bodyInput').value = '';
+          document.getElementById("nameInput").value = "";
+          document.getElementById("emailInput").value = "";
+          document.getElementById("bodyInput").value = "";
           document.getElementById("successToast").classList.remove("hidden");
           setTimeout(() => {
             document.getElementById("successToast").classList.add("hidden");

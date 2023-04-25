@@ -68,10 +68,12 @@ const logo = {
 </header>
 
 <script is:inline>
-  document.getElementById("partnerWithUsButton").addEventListener("click", (_event) => {
-    const hamburger = document.querySelector("[data-aw-toggle-menu]");
-    if (hamburger.classList.contains("expanded")) {
-      hamburger.click();
-    }
-  });
+  document
+    .getElementById("partnerWithUsButton")
+    .addEventListener("click", (_event) => {
+      const hamburger = document.querySelector("[data-aw-toggle-menu]");
+      if (hamburger.classList.contains("expanded")) {
+        hamburger.click();
+      }
+    });
 </script>
